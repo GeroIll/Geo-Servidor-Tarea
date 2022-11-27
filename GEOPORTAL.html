@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <link rel="icon" href="https://www.uasb.edu.bo/wp-content/uploads/2020/10/LOGO-UASB-2.jpg" type="image/x-icon">
+	    <br><br>
+	    <meta charset="UTF-8">
+	    <title> GEOPORTAL GEROILLL</title>
+        <body style="background-color:rgb(215, 238, 185)"></body>
+
+        <u><h1 style="text-align:center; font-size:300%;font-family:Candara;text-align:center"> <img src="https://www.defensa.gob.ec/wp-content/uploads/2019/02/logo_igm.jpg" width="200px" height="100px">&nbsp&nbsp&nbsp Universidad Andina Simón Bolivar&nbsp&nbsp&nbsp <img src="https://www.defensa.gob.ec/wp-content/uploads/2018/07/isotipo-midena_1.png" width="175px" height="100px"></h1><u></u>         
+<u><h2 style="text-align: center;">ARQUITECTURA DE SERVICIOS WEB</h2></u>
+<u><h3 style="text-aling: center;">Alumno: Geronimo Illescas</h3></u>
+</body>
+
+<br><br><br>
+        <style> 
+
+	
+        .botonimagen1{
+	background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Ortofoto_Citt%C3%A0_Alta%2C_Rocca.jpg/1024px-Ortofoto_Citt%C3%A0_Alta%2C_Rocca.jpg);
+	background-repeat:no-repeat;
+	text-align: center;
+	font-size: 30px;
+	height:120px;
+	width:320px;
+	background-position:center;
+	color:rgb(7, 48, 110)
+		}
+         .botonimagen2{
+	background-image:url(https://static1.ideal.es/www/multimedia/202012/23/media/cortadas/JAEN-plazasantiago-kTsF-U13033347090DkH-624x385@Ideal.jpg);
+	background-repeat:no-repeat;
+	text-align: center;
+	font-size: 30px;
+	height:120px;
+	width:320px;
+	background-position:center;
+	color:rgb(7, 48, 110)
+		} 
+        .botonimagen3{
+	background-image:url(https://cflvdg.avoz.es/sc/NzS1sntonnlCQLkTvb5rcF0D8SY=/768x/2015/03/22/0012_201503A22C4F1jpg/Foto/A22C4F1.jpg);
+	background-repeat:no-repeat;
+	text-align: center;
+	font-size: 30px;
+	height:120px;
+	width:320px;
+	background-position:center;
+	color:rgb(7, 48, 110)
+		}
+        .botonimagen4{
+	background-image:url(https://cflvdg.avoz.es/sc/b2INa7rAempoU9meVIeryFWFp8E=/768x/2022/05/19/00121652962982122145175/Foto/0000.jpg);
+	background-repeat:no-repeat;
+	text-align: center;
+	font-size: 30px;
+	height:120px;
+	width:320px;
+	background-position:center;
+	color:rgb(7, 48, 110)
+		}
+    </style>
+     
+    <script>
+
+    function desplegableorto(){
+	
+	    var lugar = document.getElementById("midesplegable").value;
+	    alert(lugar)
+	    if (lugar=="Quito"){coord="-78.66628433,-0.60748026,-78.05437895,0.11337256" 
+        capaorto="quito 2019"} 
+        else if (lugar=="Machala"){ coord="-79.93884046,-3.41759998,-79.81190844,-3.17152135"
+        capaorto="igm:machala"}
+        else if (lugar=="Santo Domingo"){ coord="-79.22291329,-0.21229463,-79.16483571,-0.19735185"
+        capaorto="afc:or_sto_domingo_2019_2"} 
+        else if (lugar=="Quijos"){ coord="-77.69060805,-0.20007917,-77.57224965,-0.09463860"
+        capaorto="sanrafael:rio_quijos"} 
+        else if (lugar=="Pujilí"){ coord="-78.79777070,-1.12209181,-78.60378824,-0.87520018" 
+        capaorto="igm2019:OTF ÑIII-E4c_ÑIV-A2a_PUJILI_RGB" } 
+        else if (lugar=="Cuenca"){ coord="-79.38738273,-3.192755784,-78.97506020,--2.80556376" 
+        capaorto="cuenca 2019" 	} 
+        else if (lugar=="Putumayo"){ 	coord="-76.84668921,0.14824381,-76.40355418,0.21617423" 
+        capaorto="igm:gral_farfan_rio_putumayo" } 
+        else if (lugar=="Azogues"){ 	coord="-78.86857765,-2.78897375,-78.82419767,-2.71666567" 	
+        capaorto="igm:Azoguez"} 
+        else if (lugar=="Nabon"){ 	coord="-79.38820391,-3.51308361,-79.1052918,-3.14687060" 	
+        capaorto="nabon 2019" 	} 
+        else if (lugar=="Guayaquil"){ 	coord="-80.47265111,-3.05610100,-79.777418,-1.94795027" 
+        capaorto="igm:canton_guayaquil_2011" } 
+    
+	
+        var enlace="https://www.geoportaligm.gob.ec/orto/wms?SERVICE=WMS&REQUEST=GETMAP&version=1.3.0&WIDTH=600&HEIGHT=600&LAYERS="+capaorto+"&format=IMAGE/PNG&BBOX="+coord;
+	 document.getElementById("visualizaorto").href = enlace
+	}
+	
+
+</script>
+
+<center>
+    <select class= "botonimagen1" id="midesplegable" onchange="desplegableorto()">
+    <option value="">ORTOFOTOS
+    <option value="Quito">Quito
+    <option value="Machala">Machala
+    <option value="Santo Domingo">Santo Domingo
+    <option value="Quijos">Quijos
+    <option value="Pujilí">Pujilí
+    <option value="Cuenca">Cuenca
+    <option value="Putumayo">Putumayo
+    <option value="Azogues">Azogues
+    <option value="Nabon">Nabon 
+    <option value="Guayaquil">Guayaquil
+             
+    </select>
+</center>
+ 
+<br>
+ <center><a target="_blank" id="visualizaorto" href="">Visualice ortofotos aquí</a></center>
+ 
+<br><br><br><br>
+ 
+ <script>
+
+    function desplegablegeo(){
+    
+        var lugar = document.getElementById("midesplegable4").value;
+        alert(lugar)
+        if (lugar=="Nabon"){coord="-79.30917608,-3.47667586,-78.93333586,-3.18946374" 
+        capaorto="Illescas:Canton Nabon"} 
+        else if (lugar=="Vias"){ coord="-64.40934864,-19.66274426,-63.97923719,-19.1505183"
+        capaorto="Estrada_G:caminos"}
+        else if (lugar=="Parque Central"){ coord="-97.76341742,-80.01343130,-64.23658257,0.0"
+        capaorto="Espinoza_A:Arboles"} 
+               
+    
+        var enlace="http://geoserver.idesinde.com:8080/geoserver/wfs?SERVICE=WMS&REQUEST=GETMAP&version=1.3.0&WIDTH=600&HEIGHT=600&LAYERS="+capaorto+"&format=IMAGE/PNG&BBOX="+coord;
+     document.getElementById("visualizargeop").href = enlace
+    }
+    
+
+</script>
+
+<center>
+    <select class= "botonimagen4" id="midesplegable4" onchange="desplegablegeo()">
+    <option value="">GEOSERVER
+    <option value="Nabon">Nabon
+    <option value="Vias">Vias
+    <option value="Santo Domingo">Santo Domingo
+  
+    </select>
+</center>
+ 
+<br>
+ <center><a target="_blank" id="visualizargeop" href="">Visualice Geo Portal aqui</a></center>
+ 
+ <br><br><br><br>
+ <script>
+
+    function visualizarinfoIGM(){
+	
+	    var lugar = document.getElementById("midesplegable1").value;
+	    alert(lugar)
+	    if (lugar=="Aeropuerto"){coord="-79.89264255,-2.16916385,-78.34885122,-0.10157379" 
+        capaorto="igm:aeropuerto_a"} 
+        else if (lugar=="Islas"){ coord="-81.08405644,-4.49130165,-75.19252133,1.45507655"
+        capaorto="igm:isla_a"}
+        else if (lugar=="linea de tren"){ coord="-81.00009021,-5.01894003,-74.97805153,-2.00276940"
+        capaorto="linea_tren_l"} 
+        
+	
+        var enlace="https://www.geoportaligm.gob.ec/regional/wms?SERVICE=WMS&REQUEST=GETMAP&version=1.3.0&WIDTH=800&HEIGHT=800&LAYERS="+capaorto+"&format=IMAGE/PNG&BBOX="+coord;
+	 document.getElementById("visualizarwms").href = enlace
+	}
+	
+
+</script>
+
+<center>
+    <select class= "botonimagen2" id="midesplegable1" onchange="visualizarinfoIGM()">
+    <option value="">WEB MAP SERVICE IGM
+    <option value="Aeropuerto">Aeropuerto
+    <option value="Islas">Islas
+    <option value="linea de tren">Linea de Tren 
+   
+             
+    </select>
+</center>
+ 
+<br>
+ <center><a target="_blank" id="visualizarwms" href="">Visualice WMS aquí</a></center>
+ 
+ <br><br><br><br>
+ <script>
+
+    function descargaregional(){
+        var caparegional = document.getElementById("desplegableregional").value;
+        var formato = document.getElementById("desplegableregfor").value;
+        
+        var enlacereg = "http://www.geoportaligm.gob.ec/regional/wfs?request=GetFeature&service=wfs&version=2.0.0&typename="+caparegional+"&outputformat="+formato;
+        
+        document.getElementById("Descargareg").href= enlacereg
+        }
+        
+          
+        
+    
+    </script>
+    
+        <center><select class= "botonimagen3" id="desplegableregional" onchange="descargaregional()">
+            <option value="">¿Qué capa desea?
+            <option value="igm:aeropuerto_a">Aeropuerto área
+            <option value="igm:aeropuerto_p">Aeropuerto punto
+            <option value="igm:area_inundacion_a">Áreas de Inundación
+            <option value="igm:cantera_p">Cantera
+            <option value="igm:caracteristica_terreno_a">Características del terreno
+            <option value="igm:poblado_p">Poblado
+            <option value="igm:cienaga_a">Ciénega
+            <option value="igm:curva_nivel_l">Curva de Nivel
+            <option value="igm:texto_descriptivo_l">Descripción de características de una zona (línea)
+            <option value="igm:texto_descriptivo_p">Descripción de características de una zona (punto)
+            <option value="igm:dique_l">Dique
+            <option value="igm:embalse_a">Embalse
+            <option value="igm:granjas_acuaticas_a">Granjas Acuáticas
+            <option value="igm:isla_a">Isla
+            <option value="igm:lago_laguna_a">Lagos y Lagunas
+            <option value="igm:linea_tren_l">Línea del Tren
+            <option value="igm:zona_manglar_a">Manglar
+            <option value="igm:pista_aterrizaje_p">Pista de aterrizaje (línea)
+            <option value="igm:zona_edificada_a">Pista de aterrizaje (punto)
+            <option value="igm:puente_l">Pista de aterrizaje (punto)
+            <option value="igm:zona_edificada_a">Puente (linea)
+            <option value="igm:puente_p">Puente (punto)
+            <option value="igm:punto_acotado_p">Punto Acotado
+            <option value="igm:rodera_l">Rodera, camino
+            <option value="igm:rio_a">Ríos Dobles
+            <option value="igm:rio_l">Ríos Simples
+            <option value="igm:sendero_l">Senderos
+            <option value="igm:nombres_areas_p">Sitio Geográfico
+            <option value="igm:terraplen_l">Terraplén
+            <option value="igm:tuberia_l">Tubería
+            <option value="igm:tunel_p">Túnel (punto)
+            <option value="igm:vertice_p">Vértices
+            <option value="igm:via_l">Vías
+            <option value="igm:zona_urbana_a">Zona Urbana
+            <option value="igm:tunel_l">tunel_l   
+          </select></center>
+          
+          
+               <center><select class= "button" id="desplegableregfor" onchange="descargaregional()">
+            <option value="">¿En qué formato desea?
+            <option value="SHAPE-ZIP">SHAPEFILE
+            <option value="GML">GML
+            <option value="KML">KML
+          </select></center>
+          <br>
+          <center><a  id="Descargareg" href=""><u>Descarga de información Regional<u></a></center>
+         
+                 
+        </select>
+    </center>
+
+
+
+    <link rel="icon" href="https://www.uasb.edu.bo/wp-content/uploads/2020/10/LOGO-UASB-2.jpg" type="image/x-icon">
+    <br><br>
+    <meta charset="UTF-8">
+    <title> GEOPORTAL GEROILLL</title>
+    
+   
+    
+
+ <body>
+<nav>
+          <ul>
+         <li> <a href="file:///C:/Users/GERONIMO%20ILLESCAS/Desktop/GeroIll_Web/partes/CV_GILLESCAS.html">Hoja de vida</a> </li>
+         
+     </ul>
+ </nav>
+</head>
+
+
+
+	</body>
+	</html>
